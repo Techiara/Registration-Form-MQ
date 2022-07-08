@@ -28,7 +28,7 @@ body{
 main{
 	display: grid;
 	grid-template-columns: 50% 50%;
-	background: url(bg-intro-desktop.png) no-repeat;
+	background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313403/image/bg-intro-desktop_x5eev5.png) no-repeat;
 	background-size: cover;
 	height: 100vh;
 	align-items: center;
@@ -72,7 +72,7 @@ form input, form button{
 .long[data-error] .input{
 	border-color: #c92432;
 	color: #c92432;
-	background: url(icon-error.svg) no-repeat scroll 7px 7px;
+	background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313408/image/icon-error_kmb66s.svg) no-repeat scroll 7px 7px;
 	background-position: 95% 50%;
 }
 
@@ -145,8 +145,7 @@ form h6 span{
 }
 
 /*
-Try to specify font weight and family. I feel default styling is affecting some of them
-especially the buttons in css*/
+Try to specify font weight and family. */
 
 .left_side h1{
 	font-weight: 700;
@@ -181,7 +180,7 @@ main h1 {
 	main{
 	display: flex;
 	flex-direction: column;
-	background: url(bg-intro-mobile.png) no-repeat;
+	background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313403/image/bg-intro-mobile_orkycq.png) no-repeat;
 	background-size: cover;
 	height: auto;
 	align-items: center;
@@ -221,3 +220,8 @@ main h1 {
 
 	}
 }
+@media only screen and (max-width: 960px) {
+	.selector {
+	  property: value;
+	}
+  }
