@@ -1,54 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-:root{
-	--Red: hsl(0, 100%, 74%); 
-	--Green: hsl(154, 59%, 51%);
-	--Blue: hsl(248, 32%, 49%);
-	--Dark-Blue: hsl(249, 10%, 26%);
-	--Grayish-Blue: hsl(246, 25%, 77%)
+body {
+    background-color: rgb(254,121,120);
+    height: 100vh;
 }
 
-
-
-html{
-	height: 100%;
-	width: auto;
+main {
+    background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313403/image/bg-intro-desktop_x5eev5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    font-family: Poppins;
 }
 
-body{
-	font-size: 16px;
+.main-area {
+    display: flex;
+    align-items: center;
+    width: 62.5rem;
+    height: 90%;
+    margin: auto;
+    justify-content: space-between;
 }
 
-main{
-	display: grid;
-	grid-template-columns: 50% 50%;
-	background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313403/image/bg-intro-desktop_x5eev5.png) no-repeat;
-	background-size: cover;
-	height: 100vh;
-	align-items: center;
-	padding: 100px;
-	background-color: var(--Red);
-	background-blend-mode: luminosity;
-	font-family:  'Poppins', sans-serif;
+.text-intro {
+    color: white;
+    text-align: left;
+    width: 450px;
 }
 
-form{
+.text-intro h1 {
+    font-size: 3rem;
+    margin: 0 0 30px 0;
+}
+
+.form-area {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 20px;
+}
+
+#trial-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: rgb(94,84,164);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 0.75rem;
+    box-shadow: 0 8px 2px -2px rgba(128, 128, 128, 0.438);
+}
+
+#trial-card span {
+    font-weight: bolder;
+}
+
+.long[data-error] .input{
+	border-color: #c92432;
+	color: #c92432;
+	background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313408/image/icon-error_kmb66s.svg) no-repeat scroll 7px 7px;
+	background-position: 95% 50%;
+}
+
+.long[data-error]::after{
+	content: attr(data-error);
+	font-size: 0.6em;
+	color: hsl(0, 100%, 74%);
 	display: flex;
-	flex-direction: column;
-	background-color: white;
-	justify-content: space-evenly;
-	padding: 30px;
-	border-radius: 10px;
-	height: 400px;
-	box-shadow: 0 5px rgba(181, 99, 103, 0.5);
+	justify-content: flex-end;
+	font-style: italic;
 }
-
 form input, form button{
 	height: 40px;
 	border-radius: 5px;
@@ -66,162 +94,109 @@ form input, form button{
 	border-width: 1px;
 	border-color: var(--Dark-Blue);
 }
-
-
-
-.long[data-error] .input{
-	border-color: #c92432;
-	color: #c92432;
-	background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313408/image/icon-error_kmb66s.svg) no-repeat scroll 7px 7px;
-	background-position: 95% 50%;
+.reg-form {
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 2px -2px rgba(128, 128, 128, 0.438);
 }
 
-.long[data-error]::after{
-	content: attr(data-error);
-	font-size: 0.5em;
-	color: hsl(0, 100%, 74%);
-	display: flex;
-	justify-content: flex-end;
-	font-style: italic;
-}
-
-
-form button{
-	background-color: var(--Green);
-	border-style: none;
-	color: white;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	cursor: pointer;
-}
-
-form button:hover{
-	background: #71daad;
-
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
 
-form input{
-	padding: 20px;
-	font-size: 0.75em;
+.reg-form input {
+    padding: 10px;
+    font-size: 0.70rem;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    border: 1px solid rgb(163, 162, 162);
+    border-radius: 5px;;
 }
 
-.right_side > button {
-	height: 40px;
-	width: 100%;
-	border-radius: 5px;
-	border-style: none;
-	margin-bottom: 15px;
-	background-color: var(--Blue);
-	color: white;
-	box-shadow: 0 5px rgba(181, 99, 103, 0.5);
+form:active input:focus:invalid {
+    border: 1px solid red;
+    background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313408/image/icon-error_kmb66s.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
 }
 
-.left_side{
-	color: white;
-	padding:  90px;
+.reg-form input:active {
+    border: 1px solid gray !important;
 }
 
-h6{
-	color: var(--Grayish-Blue);
-	text-align: center;
-	font-size: 0.58rem;
+#register {
+    background: rgb(51,207,139);
+    color: white;
+    border: 0px;
+    cursor: pointer;
 }
 
-form h6 {
-	font-weight: 500;
+#t-and-c {
+    font-size: 0.5rem;
+    color: rgb(175, 173, 173);
 }
 
-form h6 span{
-	color: var(--Red);
-	font-weight: 700;
-
+#t-and-c a {
+    color: rgb(254,121,120);
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.right_side{
-	margin-left: 70px;
-	margin-right: 70px;
+@media screen and (max-width: 1440px) {
+    main {
+        background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313403/image/bg-intro-desktop_x5eev5.png);
+    }
+
+    .main-area {
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 500px;
+        min-height: 500px;
+        margin: 50px auto;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .text-intro {
+        text-align: center;
+        width: 100%;
+    }
+
+    .form-area {
+        width: 100%;
+    }
 }
 
-/*
-Try to specify font weight and family. */
+@media screen and (max-width: 375px) {
+    main {
+        background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313403/image/bg-intro-mobile_orkycq.png);
+    }
 
-.left_side h1{
-	font-weight: 700;
-	font-family: 'Poppins', sans-serif;
+    .main-area {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        min-height: 500px;
+        margin: 50px auto;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .text-intro {
+        text-align: center;
+        width: 100%;
+    }
+
+    .form-area {
+        width: 100%;
+    }
 }
-
-.left_side h5{
-	font-weight: 400;
-	font-family: 'Poppins', sans-serif;
-
-}
-.right_side > button {
-	font-weight: 700;
-	font-family: 'Poppins', sans-serif;
-}
-
-.right_side > button span{
-	font-weight: 500;
-	font-family: 'Poppins', sans-serif;
-	color: var(--Grayish-Blue);
-}
-
-
-
-main h1 {
-	line-height: 50px;
-	margin-bottom: 20px;
-	font-size: 2.5em;
-}
-
-@media (max-width: 375px){
-	main{
-	display: flex;
-	flex-direction: column;
-	background: url(https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313403/image/bg-intro-mobile_orkycq.png) no-repeat;
-	background-size: cover;
-	height: auto;
-	align-items: center;
-	background-color: var(--Red);
-	background-blend-mode: luminosity;
-	font-family:  'Poppins', sans-serif;
-	padding: 10px;
-}
-	.left_side{
-		padding: 10px;
-		width: 100%;
-		margin-top: 40px;
-	}
-	
-	main h1{
-		font-size: 1.7em;
-		text-align: center;
-		margin-top: 50px;
-	}
-	main h5{
-		text-align: center;
-		line-height: 25px;
-		font-weight: 700;
-	}
-
-	.right_side #this{
-		width: 90vw;
-		height: 80px;
-		margin-top: 40px;
-		border-radius: 10px;
-		border-bottom: 30px;
-	}
-
-	form{
-		height: 500px;
-		margin: 20px auto 50px;
-
-	}
-}
-@media only screen and (max-width: 960px) {
-	.selector {
-	  property: value;
-	}
-  }

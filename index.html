@@ -1,52 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Registration Page</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="text/css" href="https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313405/image/favicon-32x32_fglplv.png">
 </head>
 <body>
-	<main>
-		<div class="left_side">
-			<h1>Learn to code by watching others</h1>
-
-			<h5>See how experienced developers solve problems in real-time.
-			Watching scripted tutorials is great but understanding how developers
-			think is invaluable.</h5>
-		</div>
-		<div class="right_side">
-			<button type="submit" id="this">
-				Try it free 7 days<span> then $20/mo. thereafter</span>
-			</button>
-			<div class="form">
-				<form action="">
-					<div class="long" data-error="First Name cannot be empty">
-						<i href="https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313408/image/icon-error_kmb66s.svg"></i>
-						<input type="text" placeholder="First Name" id="fname" class="input">	
-					</div>
-					<div class="long" data-error="Last Name cannot be empty">
-						<input type="text"  placeholder="Last Name" id="lname" class="input">	
-					</div>
-					<div class="long" data-error="Looks like this is not an email">						
-						<input type="email" placeholder="Email Address" id="email" class="input">	
-					</div>
-					<div class="long" data-error="Password cannot be empty">
-						<input type="password" name="" placeholder="Password" id="pword" class="input">
-					</div>					
-					<button type="submit" value="submit" >CLAIM YOUR FREE TRIAL</button>
-					<h6>By clicking the button, you are agreeing to our <span>TERMS AND SERVICES</span></h6>
-				</form>
-			</div>
-		</div>
-	</main>
-
-	<script>
-		document.querySelectorAll('.long[data-error] .input').forEach(inpEl => {
-			inpEl.addEventListener('input', () => inpEl.parentElement.removeAttribute('data-error'));
-		});
-	</script>
-
+    <main>
+        <div class= "main-area">
+            <div class= "text-intro">
+                <h1>Learn to code by watching others</h1>
+                <p>See how experienced developers solve problems in real-time.<br/>
+                Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+            </div>
+            <div class= "form-area">
+                <div id= "trial-card">
+                    <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+                </div>
+                <div class= "reg-form">
+                    <form action="">
+                    <div class="long" data-error="First Name cannot be empty">
+                        <i href="https://res.cloudinary.com/dqmqsjhv0/image/upload/v1657313408/image/icon-error_kmb66s.svg"></i>
+                        <input type="text" placeholder="First Name" value="" id="fname" class="input" required minlength="3" maxlength="25"/>
+                    </div>
+                    <div class="long" data-error="Last Name cannot be empty">
+                        <input type="text" placeholder="Last Name" value="" class="input" required minlength="3" maxlength="25"/>
+                    </div>
+                    <div class="long" data-error="Looks like this is not an email">		
+                        <input type="email" placeholder="Email Address" value="" class="input" required/>
+                    </div>
+                    <div class="long" data-error="Password cannot be empty">
+                        <input type="password" placeholder="Password" value="" class="input" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
+                    </div>
+                        <input id= "register" type="submit" value="CLAIM YOUR FREE TRIAL"/>
+                    </form>
+                    <p id= "t-and-c">By clicking this button, you are agreeing to our <a href="/">Terms and Services</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
